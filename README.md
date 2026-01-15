@@ -328,6 +328,559 @@ dotnet publish -c Release
 
 ---
 
+## テンプレートの気になるやつあれこれ
+<details>
+<summary>全ページに/Layoutが適用される仕組み</summary>
+レイアウトが全ページで読み込まれる設定箇所を確認中です。
+
+
+[5 tools called]
+
+
+レイアウトが全ページで読み込まれる設定箇所を確認しました。主な設定は次の2箇所です。
+
+
+[2 tools called]
+
+
+レイアウトが全ページで読み込まれる設定箇所は次の通りです。
+
+## 1. **Routes.razor** でデフォルトレイアウトを指定
+
+```3:3:Blazor1/Components/Routes.razor
+        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+```
+
+この `DefaultLayout="typeof(Layout.MainLayout)"` により、個別にレイアウトを指定していないページはすべて `MainLayout.razor` が適用されます。
+
+## 2. **App.razor** で ReconnectModal を直接配置
+
+```19:19:Blazor1/Components/App.razor
+    <ReconnectModal />
+```
+
+`ReconnectModal` は `App.razor` に直接含まれているため、全ページで常に読み込まれます。
+
+## 3. **MainLayout.razor** 内で NavMenu を配置
+
+```5:5:Blazor1/Components/Layout/MainLayout.razor
+        <NavMenu />
+```
+
+`NavMenu` は `MainLayout.razor` 内に含まれているため、`MainLayout` が適用される全ページで表示されます。
+
+## 階層構造
+
+```
+App.razor（最上位）
+├── Routes.razor
+│   └── RouteView（DefaultLayout="MainLayout"）
+│       └── MainLayout.razor
+│           ├── NavMenu.razor ← MainLayout内に含まれる
+│           └── @Body（各ページのコンテンツがここに表示）
+└── ReconnectModal.razor ← App.razorに直接含まれる
+```
+
+## まとめ
+
+- `MainLayout` と `NavMenu` は `Routes.razor` の `DefaultLayout` により全ページに適用
+- `ReconnectModal` は `App.razor` に直接配置されているため全ページで表示
+
+個別のページで別レイアウトを使う場合は、ページファイルの先頭で `@layout` ディレクティブを指定します（例: `@layout AnotherLayout`）。
+</details>
+
+<details>
+<summary>Blazorの特殊キーワード</summary>
+# Blazor Razor ディレクティブ・特殊キーワード リファレンス
+
+このドキュメントでは、Blazorで使用できるRazorディレクティブと特殊キーワードをまとめています。
+
+## 確認方法
+
+### 1. 公式ドキュメントを参照
+- **Microsoft公式ドキュメント**: https://learn.microsoft.com/aspnet/core/blazor/components/
+- **Razor構文リファレンス**: https://learn.microsoft.com/aspnet/core/mvc/views/razor
+
+### 2. IntelliSenseを活用
+Visual StudioやVisual Studio Codeで `.razor` ファイルを編集する際、`@` を入力すると利用可能なディレクティブが候補として表示されます。
+
+### 3. プロジェクト内で検索
+```bash
+# プロジェクト内で @ で始まるキーワードを検索
+grep -r "@\w+" Components/
+```
+
+---
+
+## 主要なディレクティブ一覧
+
+### ページ・ルーティング関連
+
+#### `@page`
+ページのルートを定義します。
+
+```razor
+@page "/"
+@page "/weather"
+@page "/user/{UserId:int}"
+```
+
+**使用例（このプロジェクト内）:**
+- `Home.razor`: `@page "/"`
+- `Weather.razor`: `@page "/weather"`
+- `Counter.razor`: `@page "/counter"`
+
+---
+
+### レイアウト関連
+
+#### `@layout`
+特定のページで使用するレイアウトを指定します。
+
+```razor
+@layout AnotherLayout
+```
+
+**注意:** このプロジェクトでは `Routes.razor` で `DefaultLayout` が設定されているため、個別に指定していない場合は `MainLayout` が使用されます。
+
+#### `@Body`
+レイアウトコンポーネント内で、子コンテンツを表示する位置を指定します。
+
+```razor
+@inherits LayoutComponentBase
+
+<div class="content">
+    @Body  <!-- ここにページコンテンツが表示される -->
+</div>
+```
+
+**使用例（このプロジェクト内）:**
+- `MainLayout.razor`: `<article class="content px-4">@Body</article>`
+
+---
+
+### 名前空間・インポート関連
+
+#### `@using`
+名前空間をインポートします。
+
+```razor
+@using System.Net.Http
+@using Microsoft.AspNetCore.Components.Web
+@using Blazor1.Components
+```
+
+**使用例（このプロジェクト内）:**
+- `_Imports.razor`: 複数の `@using` ディレクティブが定義されています
+
+#### `@namespace`
+コンポーネントの名前空間を設定します。
+
+```razor
+@namespace Blazor1.Components.Pages
+```
+
+---
+
+### 継承・属性関連
+
+#### `@inherits`
+コンポーネントの基底クラスを指定します。
+
+```razor
+@inherits LayoutComponentBase
+```
+
+**使用例（このプロジェクト内）:**
+- `MainLayout.razor`: `@inherits LayoutComponentBase`
+
+#### `@attribute`
+コンポーネントに属性を追加します。
+
+```razor
+@attribute [Authorize]
+@attribute [StreamRendering]
+@attribute [Route("/custom")]
+```
+
+**使用例（このプロジェクト内）:**
+- `Weather.razor`: `@attribute [StreamRendering]`
+
+---
+
+### レンダリングモード関連
+
+#### `@rendermode`
+コンポーネントのレンダリングモードを指定します。
+
+```razor
+@rendermode InteractiveServer
+@rendermode InteractiveWebAssembly
+@rendermode InteractiveAuto
+```
+
+**使用例（このプロジェクト内）:**
+- `Counter.razor`: `@rendermode InteractiveAuto`
+
+**利用可能なモード:**
+- `InteractiveServer`: サーバー側でインタラクティブに実行
+- `InteractiveWebAssembly`: クライアント側（WebAssembly）で実行
+- `InteractiveAuto`: 初回はサーバー、以降はWebAssembly
+- `StreamRendering`: ストリーミングレンダリング（属性として使用）
+
+---
+
+### コードブロック関連
+
+#### `@code`
+C#コードを記述するブロックです。
+
+```razor
+@code {
+    private int count = 0;
+    
+    private void Increment()
+    {
+        count++;
+    }
+}
+```
+
+**使用例（このプロジェクト内）:**
+- `Counter.razor`: `@code { private int currentCount = 0; ... }`
+- `Weather.razor`: `@code { private WeatherForecast[]? forecasts; ... }`
+
+#### `@functions`
+`@code` と同様に、C#コードを記述します（古い構文、現在は `@code` を推奨）。
+
+```razor
+@functions {
+    // C#コード
+}
+```
+
+---
+
+### 条件分岐・ループ関連
+
+#### `@if` / `@else if` / `@else`
+条件分岐を行います。
+
+```razor
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else if (hasError)
+{
+    <p>Error occurred</p>
+}
+else
+{
+    <p>Content loaded</p>
+}
+```
+
+**使用例（このプロジェクト内）:**
+- `Weather.razor`: `@if (forecasts == null) { ... } else { ... }`
+
+#### `@switch` / `@case` / `@default`
+switch文を使用します。
+
+```razor
+@switch (status)
+{
+    case "loading":
+        <p>Loading...</p>
+        break;
+    case "loaded":
+        <p>Loaded</p>
+        break;
+    default:
+        <p>Unknown</p>
+        break;
+}
+```
+
+#### `@for`
+forループを使用します。
+
+```razor
+@for (int i = 0; i < items.Length; i++)
+{
+    <p>Item @i: @items[i]</p>
+}
+```
+
+#### `@foreach`
+foreachループを使用します。
+
+```razor
+@foreach (var item in items)
+{
+    <p>@item.Name</p>
+}
+```
+
+**使用例（このプロジェクト内）:**
+- `Weather.razor`: `@foreach (var forecast in forecasts) { ... }`
+
+#### `@while`
+whileループを使用します。
+
+```razor
+@while (condition)
+{
+    <p>Looping...</p>
+}
+```
+
+---
+
+### 変数・式の埋め込み
+
+#### `@` (式の埋め込み)
+C#の式や変数をHTMLに埋め込みます。
+
+```razor
+<p>Count: @currentCount</p>
+<p>Total: @(price * quantity)</p>
+<p>Name: @user.Name</p>
+```
+
+**使用例（このプロジェクト内）:**
+- `Counter.razor`: `<p role="status">Current count: @currentCount</p>`
+- `Weather.razor`: `<td>@forecast.Date.ToShortDateString()</td>`
+
+#### `@@`
+`@` 記号自体を出力する場合に使用します。
+
+```razor
+<p>Email: user@@example.com</p>
+```
+
+---
+
+### イベントハンドリング関連
+
+#### `@onclick` / `@onchange` / `@oninput` など
+DOMイベントをハンドルします。
+
+```razor
+<button @onclick="HandleClick">Click me</button>
+<input @onchange="HandleChange" />
+<input @oninput="HandleInput" />
+```
+
+**使用例（このプロジェクト内）:**
+- `Counter.razor`: `<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>`
+
+**主要なイベント:**
+- `@onclick`: クリックイベント
+- `@onchange`: 値変更イベント
+- `@oninput`: 入力イベント
+- `@onkeydown` / `@onkeyup`: キーボードイベント
+- `@onfocus` / `@onblur`: フォーカスイベント
+- `@onsubmit`: フォーム送信イベント
+
+#### `@onclick:preventDefault`
+イベントのデフォルト動作を防ぎます。
+
+```razor
+<a href="/" @onclick="HandleClick" @onclick:preventDefault>Link</a>
+```
+
+#### `@onclick:stopPropagation`
+イベントの伝播を停止します。
+
+```razor
+<div @onclick:stopPropagation>
+    <button @onclick="HandleClick">Click</button>
+</div>
+```
+
+---
+
+### データバインディング関連
+
+#### `@bind`
+双方向データバインディングを行います。
+
+```razor
+<input @bind="name" />
+<input @bind="name" @bind:event="oninput" />
+<input @bind="date" @bind:format="yyyy-MM-dd" />
+```
+
+#### `@bind:get` / `@bind:set`
+双方向バインディングを明示的に制御します。
+
+```razor
+<input @bind:get="@value" @bind:set="@((string v) => value = v.ToUpper())" />
+```
+
+---
+
+### コンポーネント参照関連
+
+#### `@ref`
+コンポーネントや要素への参照を取得します。
+
+```razor
+<MyComponent @ref="myComponentRef" />
+
+@code {
+    private MyComponent? myComponentRef;
+    
+    private void CallComponentMethod()
+    {
+        myComponentRef?.SomeMethod();
+    }
+}
+```
+
+#### `@key`
+リストレンダリング時に要素を識別するキーを指定します。
+
+```razor
+@foreach (var item in items)
+{
+    <ItemComponent @key="item.Id" Item="@item" />
+}
+```
+
+---
+
+### その他の特殊キーワード
+
+#### `<PageTitle>`
+ページのタイトルを設定します。
+
+```razor
+<PageTitle>Home</PageTitle>
+```
+
+**使用例（このプロジェクト内）:**
+- `Home.razor`: `<PageTitle>Home</PageTitle>`
+- `Weather.razor`: `<PageTitle>Weather</PageTitle>`
+- `Counter.razor`: `<PageTitle>Counter</PageTitle>`
+
+#### `<HeadOutlet>`
+`<head>` セクションにコンテンツを出力するためのアウトレットです。
+
+```razor
+<head>
+    <HeadOutlet />
+</head>
+```
+
+**使用例（このプロジェクト内）:**
+- `App.razor`: `<HeadOutlet />`
+
+#### `<ResourcePreloader>`
+リソースのプリロードを管理します。
+
+```razor
+<head>
+    <ResourcePreloader />
+</head>
+```
+
+**使用例（このプロジェクト内）:**
+- `App.razor`: `<ResourcePreloader />`
+
+#### `<ImportMap>`
+ESモジュールのインポートマップを定義します。
+
+```razor
+<head>
+    <ImportMap />
+</head>
+```
+
+**使用例（このプロジェクト内）:**
+- `App.razor`: `<ImportMap />`
+
+---
+
+### コメント
+
+#### `@* ... *@`
+Razorコメントです。
+
+```razor
+@* これはコメントです *@
+```
+
+#### `<!-- ... -->`
+HTMLコメントです（サーバー側で処理されます）。
+
+```razor
+<!-- これはHTMLコメントです -->
+```
+
+---
+
+## このプロジェクトで使用されているディレクティブ
+
+### ディレクティブ
+- `@page`: ルーティング定義
+- `@attribute`: 属性の追加（`[StreamRendering]`）
+- `@rendermode`: レンダリングモード指定
+- `@inherits`: 基底クラスの継承
+- `@using`: 名前空間のインポート
+- `@code`: C#コードブロック
+
+### 特殊キーワード・構文
+- `@if` / `@else`: 条件分岐
+- `@foreach`: ループ処理
+- `@`: 式の埋め込み
+- `@onclick`: イベントハンドリング
+- `@Body`: レイアウト内でのコンテンツ表示位置
+
+### 特殊コンポーネント
+- `<PageTitle>`: ページタイトル
+- `<HeadOutlet>`: ヘッドセクションのアウトレット
+- `<ResourcePreloader>`: リソースプリローダー
+- `<ImportMap>`: インポートマップ
+
+---
+
+## 参考リンク
+
+### 公式ドキュメント
+- [Blazor コンポーネントの概要](https://learn.microsoft.com/aspnet/core/blazor/components/)
+- [Razor 構文リファレンス](https://learn.microsoft.com/aspnet/core/mvc/views/razor)
+- [Blazor イベント処理](https://learn.microsoft.com/aspnet/core/blazor/components/event-handling)
+- [Blazor データバインディング](https://learn.microsoft.com/aspnet/core/blazor/components/data-binding)
+- [Blazor ルーティング](https://learn.microsoft.com/aspnet/core/blazor/fundamentals/routing)
+
+### その他
+- [Blazor University](https://blazor-university.com/) - 非公式だが包括的なチュートリアル
+- [Awesome Blazor](https://github.com/AdrienTorris/awesome-blazor) - Blazorリソース集
+
+---
+
+## 補足: ディレクティブの確認方法（コマンドライン）
+
+プロジェクト内で使用されているディレクティブを確認するには：
+
+```bash
+# PowerShell
+Select-String -Path "*.razor" -Pattern "@\w+" -Recurse
+
+# Bash/Git Bash
+grep -r "@\w+" --include="*.razor" .
+```
+
+---
+
+**最終更新日:** 2024年
+
+
+</details>
+
+
 ## 参考リンク
 
 - [Blazor公式ドキュメント](https://learn.microsoft.com/aspnet/core/blazor/)

@@ -1,4 +1,0 @@
-wwwroot\appsettings.Development.json
-wwwroot\appsettings.json
-C:\Users\koheishimo\Blazor1\Blazor1.Client\wwwroot\appsettings.Development.json
-C:\Users\koheishimo\Blazor1\Blazor1.Client\wwwroot\appsettings.json
