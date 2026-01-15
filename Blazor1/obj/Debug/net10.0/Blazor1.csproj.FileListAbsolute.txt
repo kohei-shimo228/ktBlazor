@@ -102,10 +102,10 @@ C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.csproj.Up2Date
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.dll
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\refint\Blazor1.dll
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.pdb
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.genruntimeconfig.cache
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\ref\Blazor1.dll
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.sourcelink.json
