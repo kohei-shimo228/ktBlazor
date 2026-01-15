@@ -12,12 +12,26 @@
     <ImportMap />
     <link rel="icon" type="image/png" href="favicon.png" />
     <HeadOutlet />
+    <script>
+        // テーマを即座に適用（FOUC防止）
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            let theme = savedTheme;
+            if (!theme) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 
 <body>
     <Routes />
     <ReconnectModal />
+    <script src="@Assets["theme.js"]"></script>
     <script src="@Assets["_framework/blazor.web.js"]"></script>
+    <script src="@Assets["theme-handler.js"]"></script>
 </body>
 
 </html>

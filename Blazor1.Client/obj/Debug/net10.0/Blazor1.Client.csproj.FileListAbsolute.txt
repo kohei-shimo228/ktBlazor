@@ -207,6 +207,8 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.wmhrl7tpn3.wasm
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.asutpusqyy.pdb
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.js
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.1l4onz0xjo.wasm.gz
@@ -416,6 +418,8 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.wmhrl7tpn3.wasm.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.asutpusqyy.pdb.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.js.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\Blazor1.Client.staticwebassets.runtime.json
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\Blazor1.Client.staticwebassets.endpoints.json
@@ -638,6 +642,7 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.Asse
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.AssemblyInfo.cs
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.csproj.CoreCompileInputs.cache
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.sourcelink.json
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\webcil\Microsoft.AspNetCore.Components.wasm
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm
@@ -1055,6 +1060,9 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\taflss8w
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\so7t15zwe7-{0}-tjcz0u77k5-tjcz0u77k5.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\876u71sfhm-{0}-tptq2av103-tptq2av103.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\ocietp98ao-{0}-lfu7j35m59-lfu7j35m59.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mmjeh5ih4e-{0}-wmhrl7tpn3-wmhrl7tpn3.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\9mql76c551-{0}-asutpusqyy-asutpusqyy.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mxloy96hot-{0}-n9a8v3oxdj-n9a8v3oxdj.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\staticwebassets.development.json
@@ -1065,11 +1073,3 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.dll
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\refint\Blazor1.Client.dll
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.pdb
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\ref\Blazor1.Client.dll
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.mxbv4n0cfv.wasm
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.ial9smbqgr.pdb
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.mxbv4n0cfv.wasm.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.ial9smbqgr.pdb.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.sourcelink.json
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mmjeh5ih4e-{0}-mxbv4n0cfv-mxbv4n0cfv.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\9mql76c551-{0}-ial9smbqgr-ial9smbqgr.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mxloy96hot-{0}-kb8fq7mvvt-kb8fq7mvvt.gz

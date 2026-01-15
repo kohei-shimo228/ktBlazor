@@ -36,6 +36,7 @@ C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.AssemblyInfoInputs
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.AssemblyInfo.cs
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.csproj.CoreCompileInputs.cache
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.sourcelink.json
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -46,7 +47,6 @@ C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\scopedcss\Components\Layou
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\scopedcss\bundle\Blazor1.styles.css
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\scopedcss\projectbundle\Blazor1.bundle.scp.css
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\f9o902iofb-{0}-99zm1jdh75-99zm1jdh75.gz
-C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\81eldl8dzh-{0}-khy4lop6wu-khy4lop6wu.gz
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\mx7gcmub3q-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\oq6ys08jnh-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\mj9105qm12-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -95,8 +95,6 @@ C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\vycb16svtr-{0}-
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\2a4xgvz7wn-{0}-0i02oychrm-0i02oychrm.gz
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\dlfaovbdfd-{0}-2i0r6wwb69-2i0r6wwb69.gz
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\wflxrrc08f-{0}-iz83ucvm53-iz83ucvm53.gz
-C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\ga2wa98sh3-{0}-4m66p7lz1g-4m66p7lz1g.gz
-C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\e1i5ka5ml3-{0}-4m66p7lz1g-4m66p7lz1g.gz
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\staticwebassets.development.json
@@ -108,4 +106,8 @@ C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\refint\Blazor1.dll
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.pdb
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.genruntimeconfig.cache
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\ref\Blazor1.dll
-C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\Blazor1.sourcelink.json
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\cs8we7m6g1-{0}-tu06fkwrrn-tu06fkwrrn.gz
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\81eldl8dzh-{0}-m811ef383o-m811ef383o.gz
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\gnnludcqj8-{0}-etxhhft7cz-etxhhft7cz.gz
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\ga2wa98sh3-{0}-2acuyc8q80-2acuyc8q80.gz
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\e1i5ka5ml3-{0}-2acuyc8q80-2acuyc8q80.gz

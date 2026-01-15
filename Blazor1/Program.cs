@@ -8,6 +8,8 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
+builder.Services.AddScoped<Blazor1.Services.ThemeService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
