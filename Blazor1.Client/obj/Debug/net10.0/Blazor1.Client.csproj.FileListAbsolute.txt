@@ -207,8 +207,6 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.wmhrl7tpn3.wasm
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.asutpusqyy.pdb
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.js
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.1l4onz0xjo.wasm.gz
@@ -418,8 +416,6 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.wmhrl7tpn3.wasm.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.asutpusqyy.pdb.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.js.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\Blazor1.Client.staticwebassets.runtime.json
 C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\Blazor1.Client.staticwebassets.endpoints.json
@@ -1060,9 +1056,6 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\taflss8w
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\so7t15zwe7-{0}-tjcz0u77k5-tjcz0u77k5.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\876u71sfhm-{0}-tptq2av103-tptq2av103.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\ocietp98ao-{0}-lfu7j35m59-lfu7j35m59.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mmjeh5ih4e-{0}-wmhrl7tpn3-wmhrl7tpn3.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\9mql76c551-{0}-asutpusqyy-asutpusqyy.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mxloy96hot-{0}-n9a8v3oxdj-n9a8v3oxdj.gz
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\staticwebassets.development.json
@@ -1073,3 +1066,10 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.dll
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\refint\Blazor1.Client.dll
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.pdb
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\ref\Blazor1.Client.dll
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.oxmff1v89n.wasm
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.zqyywvgts4.pdb
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.oxmff1v89n.wasm.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.zqyywvgts4.pdb.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mmjeh5ih4e-{0}-oxmff1v89n-oxmff1v89n.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\9mql76c551-{0}-zqyywvgts4-zqyywvgts4.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mxloy96hot-{0}-1whhpfkdgl-1whhpfkdgl.gz

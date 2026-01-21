@@ -109,5 +109,5 @@ C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\ref\Blazor1.dll
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\cs8we7m6g1-{0}-tu06fkwrrn-tu06fkwrrn.gz
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\81eldl8dzh-{0}-m811ef383o-m811ef383o.gz
 C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\gnnludcqj8-{0}-etxhhft7cz-etxhhft7cz.gz
-C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\ga2wa98sh3-{0}-2acuyc8q80-2acuyc8q80.gz
-C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\e1i5ka5ml3-{0}-2acuyc8q80-2acuyc8q80.gz
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\ga2wa98sh3-{0}-04jakk9t1z-04jakk9t1z.gz
+C:\Users\koheishimo\Blazor1\Blazor1\obj\Debug\net10.0\compressed\e1i5ka5ml3-{0}-04jakk9t1z-04jakk9t1z.gz

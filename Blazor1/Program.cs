@@ -9,6 +9,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddScoped<Blazor1.Services.ThemeService>();
+builder.Services.AddHttpClient<Blazor1.Services.WeatherService>();
 
 var app = builder.Build();
 

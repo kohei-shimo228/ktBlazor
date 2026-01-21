@@ -1,64 +1,165 @@
 ﻿@page "/weather"
 @attribute [StreamRendering]
+@inject Blazor1.Services.WeatherService WeatherService
+@using Blazor1.Models
 
-<PageTitle>Weather</PageTitle>
+<PageTitle>天気予報</PageTitle>
 
-<h1>Weather</h1>
+<h1>天気予報</h1>
 
-<p>This component demonstrates showing data.</p>
+<div class="mb-3">
+    <label for="citySelect" class="form-label">都市を選択:</label>
+    <select id="citySelect" class="form-select" @onchange="OnCityChanged" style="max-width: 300px;">
+        @foreach (var city in cities)
+        {
+            <option value="@city.Id" selected="@(selectedCityId == city.Id)">@city.Prefecture @city.Name</option>
+        }
+    </select>
+</div>
 
-@if (forecasts == null)
+@if (isLoading)
 {
-    <p><em>Loading...</em></p>
+    <p><em>読み込み中...</em></p>
+}
+else if (weatherData == null || weatherData.Forecasts == null)
+{
+    <div class="alert alert-warning" role="alert">
+        天気予報データの取得に失敗しました。しばらくしてから再度お試しください。
+    </div>
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th aria-label="Temperature in Celsius">Temp. (C)</th>
-                <th aria-label="Temperature in Fahrenheit">Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
+    @if (weatherData.Location != null)
+    {
+        <div class="mb-3">
+            <h3>@weatherData.Location.Prefecture @weatherData.Location.City</h3>
+            @if (weatherData.Description != null && !string.IsNullOrEmpty(weatherData.Description.Text))
             {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
+                <p class="text-muted">@weatherData.Description.Text</p>
             }
-        </tbody>
-    </table>
+        </div>
+    }
+
+    <div class="row">
+        @foreach (var forecast in weatherData.Forecasts)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            @forecast.DateLabel
+                            @if (!string.IsNullOrEmpty(forecast.Date))
+                            {
+                                <small class="text-muted">(@DateTime.Parse(forecast.Date).ToString("M/d"))</small>
+                            }
+                        </h5>
+                        
+                        @if (forecast.Image != null)
+                        {
+                            <div class="mb-2">
+                                <img src="@forecast.Image.Url" alt="@forecast.Image.Title" style="max-width: 100px;" />
+                                <p class="mb-1"><strong>@forecast.Telop</strong></p>
+                            </div>
+                        }
+                        else
+                        {
+                            <p class="mb-1"><strong>@forecast.Telop</strong></p>
+                        }
+
+                        @if (forecast.Temperature != null)
+                        {
+                            <div class="mb-2">
+                                @if (forecast.Temperature.Max != null && !string.IsNullOrEmpty(forecast.Temperature.Max.Celsius))
+                                {
+                                    <span>最高: @forecast.Temperature.Max.Celsius°C</span>
+                                }
+                                @if (forecast.Temperature.Min != null && !string.IsNullOrEmpty(forecast.Temperature.Min.Celsius))
+                                {
+                                    <span> / 最低: @forecast.Temperature.Min.Celsius°C</span>
+                                }
+                            </div>
+                        }
+
+                        @if (forecast.ChanceOfRain != null)
+                        {
+                            <div class="small text-muted">
+                                <div>降水確率:</div>
+                                @if (!string.IsNullOrEmpty(forecast.ChanceOfRain.T00_06))
+                                {
+                                    <div>0-6時: @forecast.ChanceOfRain.T00_06</div>
+                                }
+                                @if (!string.IsNullOrEmpty(forecast.ChanceOfRain.T06_12))
+                                {
+                                    <div>6-12時: @forecast.ChanceOfRain.T06_12</div>
+                                }
+                                @if (!string.IsNullOrEmpty(forecast.ChanceOfRain.T12_18))
+                                {
+                                    <div>12-18時: @forecast.ChanceOfRain.T12_18</div>
+                                }
+                                @if (!string.IsNullOrEmpty(forecast.ChanceOfRain.T18_24))
+                                {
+                                    <div>18-24時: @forecast.ChanceOfRain.T18_24</div>
+                                }
+                            </div>
+                        }
+
+                        @if (forecast.Detail != null)
+                        {
+                            <div class="mt-2 small">
+                                @if (!string.IsNullOrEmpty(forecast.Detail.Weather))
+                                {
+                                    <div>天気: @forecast.Detail.Weather</div>
+                                }
+                                @if (!string.IsNullOrEmpty(forecast.Detail.Wind))
+                                {
+                                    <div>風: @forecast.Detail.Wind</div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private WeatherApiResponse? weatherData;
+    private bool isLoading = true;
+    private string selectedCityId = "130010"; // デフォルト: 東京
+    private List<CityInfo> cities = new();
 
     protected override async Task OnInitializedAsync()
     {
-        // Simulate asynchronous loading to demonstrate streaming rendering
-        await Task.Delay(500);
-
-        var startDate = DateOnly.FromDateTime(DateTime.Now);
-        var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
-        forecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = startDate.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 155),
-            Summary = summaries[Random.Shared.Next(summaries.Length)]
-        }).ToArray();
+        cities = Services.WeatherService.GetMajorCities();
+        await LoadWeatherData();
     }
 
-    private class WeatherForecast
+    private async Task OnCityChanged(ChangeEventArgs e)
     {
-        public DateOnly Date { get; set; }
-        public int TemperatureC { get; set; }
-        public string? Summary { get; set; }
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        if (e.Value != null)
+        {
+            selectedCityId = e.Value.ToString() ?? "130010";
+            await LoadWeatherData();
+        }
+    }
+
+    private async Task LoadWeatherData()
+    {
+        isLoading = true;
+        weatherData = null;
+        
+        try
+        {
+            weatherData = await WeatherService.GetWeatherForecastAsync(selectedCityId);
+        }
+        catch
+        {
+            weatherData = null;
+        }
+        finally
+        {
+            isLoading = false;
+        }
     }
 }
