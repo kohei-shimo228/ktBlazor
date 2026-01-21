@@ -1,5 +1,17 @@
 ﻿@page "/not-found"
 @layout MainLayout
 
-<h3>Not Found</h3>
-<p>Sorry, the content you are looking for does not exist.</p>
+<PageTitle>404 - Not Found</PageTitle>
+
+<div class="not-found-container">
+    <div class="error-code">
+        <span class="digit" style="animation-delay: 0s">4</span>
+        <span class="digit" style="animation-delay: 0.1s">0</span>
+        <span class="digit" style="animation-delay: 0.2s">4</span>
+    </div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-message">申し訳ございませんが、お探しのページは存在しません。</p>
+    <div class="error-actions">
+        <a href="/" class="btn btn-primary">ホームに戻る</a>
+    </div>
+</div>

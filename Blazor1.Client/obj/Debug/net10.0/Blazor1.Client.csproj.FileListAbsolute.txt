@@ -1066,10 +1066,10 @@ C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.dll
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\refint\Blazor1.Client.dll
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\Blazor1.Client.pdb
 C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\ref\Blazor1.Client.dll
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.oxmff1v89n.wasm
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.zqyywvgts4.pdb
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.oxmff1v89n.wasm.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.zqyywvgts4.pdb.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mmjeh5ih4e-{0}-oxmff1v89n-oxmff1v89n.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\9mql76c551-{0}-zqyywvgts4-zqyywvgts4.gz
-C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mxloy96hot-{0}-1whhpfkdgl-1whhpfkdgl.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.yuc74883j7.wasm
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.u80wo2cyij.pdb
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.yuc74883j7.wasm.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\bin\Debug\net10.0\wwwroot\_framework\Blazor1.Client.u80wo2cyij.pdb.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mmjeh5ih4e-{0}-yuc74883j7-yuc74883j7.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\9mql76c551-{0}-u80wo2cyij-u80wo2cyij.gz
+C:\Users\koheishimo\Blazor1\Blazor1.Client\obj\Debug\net10.0\compressed\mxloy96hot-{0}-b9lmn64yiw-b9lmn64yiw.gz
