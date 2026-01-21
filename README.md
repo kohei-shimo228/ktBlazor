@@ -331,19 +331,6 @@ dotnet publish -c Release
 ## テンプレートの気になるやつあれこれ
 <details>
 <summary>全ページに/Layoutが適用される仕組み</summary>
-レイアウトが全ページで読み込まれる設定箇所を確認中です。
-
-
-[5 tools called]
-
-
-レイアウトが全ページで読み込まれる設定箇所を確認しました。主な設定は次の2箇所です。
-
-
-[2 tools called]
-
-
-レイアウトが全ページで読み込まれる設定箇所は次の通りです。
 
 ## 1. **Routes.razor** でデフォルトレイアウトを指定
 
@@ -391,9 +378,6 @@ App.razor（最上位）
 
 <details>
 <summary>Blazorの特殊キーワード</summary>
-# Blazor Razor ディレクティブ・特殊キーワード リファレンス
-
-このドキュメントでは、Blazorで使用できるRazorディレクティブと特殊キーワードをまとめています。
 
 ## 確認方法
 
@@ -872,10 +856,6 @@ Select-String -Path "*.razor" -Pattern "@\w+" -Recurse
 # Bash/Git Bash
 grep -r "@\w+" --include="*.razor" .
 ```
-
----
-
-**最終更新日:** 2024年
 
 
 </details>

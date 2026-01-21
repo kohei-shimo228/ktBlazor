@@ -1,9 +1,38 @@
+:root {
+    --main-bg-color: #ffffff;
+    --main-text-color: #000000;
+    --content-bg-color: #ffffff;
+    --border-color: #d6d5d5;
+    --link-color: #006bb7;
+    --heading-color: #000000;
+}
+
+[data-theme="dark"] {
+    --main-bg-color: #1a1a1a;
+    --main-text-color: #e0e0e0;
+    --content-bg-color: #1e1e1e;
+    --border-color: #3d3d3d;
+    --link-color: #4a9eff;
+    --heading-color: #ffffff;
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ページ遷移時はトランジションを無効化（フラッシュ防止） */
+html[data-transitioning="true"],
+html[data-transitioning="true"] *,
+html[data-transitioning="true"] *::before,
+html[data-transitioning="true"] *::after {
+    transition: none !important;
 }
 
 a, .btn-link {
-    color: #006bb7;
+    color: var(--link-color);
 }
 
 .btn-primary {
@@ -18,6 +47,47 @@ a, .btn-link {
 
 .content {
     padding-top: 1.1rem;
+    background-color: var(--content-bg-color);
+    color: var(--main-text-color);
+    min-height: calc(100vh - 3.5rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+/* テーブルのダークモード対応 */
+table {
+    color: var(--main-text-color);
+}
+
+table thead {
+    background-color: var(--content-bg-color);
+}
+
+table tbody tr {
+    background-color: var(--content-bg-color);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--main-bg-color);
+}
+
+[data-theme="dark"] table tbody tr:nth-child(even) {
+    background-color: #252525;
+}
+
+/* 入力フィールドのダークモード対応 */
+input, textarea, select {
+    background-color: var(--content-bg-color);
+    color: var(--main-text-color);
+    border-color: var(--border-color);
+}
+
+input:focus, textarea:focus, select:focus {
+    background-color: var(--content-bg-color);
+    color: var(--main-text-color);
+    border-color: var(--link-color);
 }
 
 h1:focus {
